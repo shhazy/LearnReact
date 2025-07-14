@@ -1,6 +1,8 @@
 // Import React and useState hook
 import React, { useState } from 'react';
-
+import { Link } from 'react-router';
+import { Helmet } from 'react-helmet-async';
+import Navbar from './Navbar';
 function LoginForm() {
   // State to store form input values
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -53,6 +55,15 @@ function LoginForm() {
   };
 
   return (
+    <>
+    <Helmet>
+            <title>Login Form | Learn React</title>
+            <meta name="description" content="Welcome to the homepage" />
+            <meta property="og:title" content="Home | My Website" />
+            <meta property="og:description" content="Welcome to the homepage" />
+          </Helmet>
+          <Navbar />
+          <div className='main-wrapper'>
     <form onSubmit={handleSubmit}>
       {/* Email Field */}
       <div>
@@ -82,6 +93,9 @@ function LoginForm() {
       {/* Submit Button */}
       <button type="submit">Login</button>
     </form>
+    <Link to="/"> Home Page</Link>
+    </div>
+    </>
   );
 }
 
