@@ -52,11 +52,12 @@ body {
 ul {
   list-style-type: none;
   margin: 0;
-  padding-left: 40%;
   overflow: hidden;
   background-color: #333;
   width: 100%;
   max-width: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
 }
 
 li {

@@ -52,10 +52,10 @@ function UserList() {
             <meta property="og:description" content="Welcome to the homepage" />
           </Helmet>
     <div>
-      <h2>User List</h2>
-      <ul style={{ backgroundColor: "white" }}>
+      <h2 style={{textAlign: "center"}}>User List</h2>
+      <ul style={{ backgroundColor: "white", textAlign: "center", flexDirection: "column" }}>
         {users.map((user) => (
-          <li key={user.id}>
+          <li style={{display: 'block'}} key={user.id}>
             {user.name} ({user.email})
           </li>
         ))}

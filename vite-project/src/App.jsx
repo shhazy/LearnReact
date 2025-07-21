@@ -7,6 +7,8 @@ import UserList from './UserList'
 import R_Router from './ReactRouter'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import React_Helmet from './ReactHelmet'
+import ExpressReact from './ExpressReact'
+import UserCrud from './UserCrud'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,7 +21,9 @@ function App() {
        <Route path="/LoginForm" element={<LoginForm />} /> 
        <Route path="/user-list" element={<UserList />} /> 
        <Route path="/react-helmet" element={<React_Helmet />} /> 
-
+       <Route path="/express-react" element={<ExpressReact/>} /> 
+       <Route path="/user-crud" element={<UserCrud/>} /> 
+      
       </Routes>
       </BrowserRouter>
 
