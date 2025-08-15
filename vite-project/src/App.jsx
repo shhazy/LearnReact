@@ -9,11 +9,13 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import React_Helmet from './ReactHelmet'
 import ExpressReact from './ExpressReact'
 import UserCrud from './UserCrud'
+import {counterContext} from './context/context'
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(10)
 
   return (
     <>
+      <counterContext.Provider value={count}>
       <BrowserRouter>
       <Routes>
        <Route index element={<R_Router />} /> 
@@ -26,6 +28,7 @@ function App() {
       
       </Routes>
       </BrowserRouter>
+      </counterContext.Provider>
 
       {/* <LoginForm />
       <UserList />

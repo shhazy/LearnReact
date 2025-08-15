@@ -1,9 +1,11 @@
 // Import React and useState hook
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router';
 import { Helmet } from 'react-helmet-async';
 import Navbar from './Navbar';
+import {counterContext} from './context/context'
 function LoginForm() {
+  const counter = useContext(counterContext);
   // State to store form input values
   const [formData, setFormData] = useState({ email: '', password: '' });
 
@@ -64,6 +66,7 @@ function LoginForm() {
           </Helmet>
           <Navbar />
           <div className='main-wrapper'>
+            <p>Counter is {counter}</p>
     <form onSubmit={handleSubmit}>
       {/* Email Field */}
       <div>
